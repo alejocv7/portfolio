@@ -1,1 +1,1 @@
-Personal Portfolio showcasing some of my work
+Personal portfolio showing some of my work
