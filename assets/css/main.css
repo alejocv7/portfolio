@@ -444,6 +444,11 @@ hr {
 	align-items: stretch;
 }
 
+.box.alt > .row h4 {
+	text-transform: none;
+	text-align: center;
+}
+
 .row>* {
 	box-sizing: border-box;
 }
@@ -2762,6 +2767,16 @@ input[type="radio"]:focus+label:before {
 
 .image.main img {
 	width: 100%;
+}
+
+.image.fit.expand {
+	z-index: 0;
+	transition: transform 0.5s ease-in-out;
+}
+
+.image.fit.expand:hover {
+	z-index: 1;
+	transform: scale(1.6);
 }
 
 @media screen and (max-width: 736px) {
