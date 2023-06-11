@@ -315,7 +315,7 @@ h3 {
 }
 
 h4 {
-    font-size: 1rem;
+    font-size: 1.2rem;
 }
 
 h5 {
@@ -442,7 +442,9 @@ hr {
 }
 
 .box.alt > .row h4 {
-    text-transform: none;
+    /* font-size: 20px; */
+    padding-top: 0.5rem;
+    text-transform: capitalize;
     text-align: center;
 }
 
@@ -2724,7 +2726,7 @@ input[type="radio"]:focus + label:before {
 
 .image.fit {
     display: block;
-    margin: 2.5rem 0;
+    margin: 1rem 0;
     width: 100%;
 }
 
@@ -2764,7 +2766,7 @@ input[type="radio"]:focus + label:before {
 
 @media screen and (max-width: 736px) {
     .image.fit {
-        margin: 2rem 0;
+        margin: 1rem 0;
     }
 
     .image.main {
