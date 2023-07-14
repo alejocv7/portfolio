@@ -315,7 +315,7 @@ h3 {
 }
 
 h4 {
-    font-size: 1.2rem;
+    font-size: 1rem;
 }
 
 h5 {
@@ -442,7 +442,6 @@ hr {
 }
 
 .box.alt > .row h4 {
-    /* font-size: 20px; */
     padding-top: 0.5rem;
     text-transform: capitalize;
     text-align: center;
@@ -3932,9 +3931,9 @@ body.is-preload #intro:not(.hidden) + #header + #nav {
 
 #main > .post header.major > h1,
 #main > .post header.major h2 {
-    font-size: 3rem;
-    line-height: 1.1;
-    margin: 0 0 2rem 0;
+    font-size: 5rem;
+    line-height: 0.5;
+    margin: 0 0 -2rem 0;
 }
 
 #main > .post.featured {
@@ -3964,7 +3963,7 @@ body.is-preload #intro:not(.hidden) + #header + #nav {
 
     #main > .post header.major > h1,
     #main > .post header.major h2 {
-        font-size: 2.5rem;
+        font-size: 3.5rem;
         line-height: 1.2;
         margin: 0 0 1.5rem 0;
     }
@@ -4014,6 +4013,11 @@ body.is-preload #intro:not(.hidden) + #header + #nav {
     border-style: solid;
     border-top-width: 2px;
     text-align: center;
+}
+
+#main > .posts > article .skills {
+    border: 1px solid #eeeeee;
+    background-color: #dcdcdc40;
 }
 
 #main > .posts > article > :last-child {
