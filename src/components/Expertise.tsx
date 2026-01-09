@@ -29,7 +29,7 @@ export function Expertise() {
                 <h2 className="text-3xl text-center font-bold tracking-tight sm:text-4xl text-foreground">Technical Expertise</h2>
             </div>
 
-            <div className="max-w-6xl mx-auto rounded-3xl border border-white/10 bg-card/50 p-8 md:p-12 relative overflow-hidden">
+            <div className="max-w-5xl mx-auto rounded-3xl border border-white/10 bg-card/50 p-8 md:p-12 relative overflow-hidden">
                 {/* Decorative background blend */}
                 <div className="absolute top-0 right-0 -mt-20 -mr-20 w-80 h-80 bg-accent-blue/10 blur-3xl rounded-full pointer-events-none" />
 

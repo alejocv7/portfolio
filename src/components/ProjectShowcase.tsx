@@ -8,12 +8,12 @@ import { portfolio } from "@/data/portfolio";
 
 export function ProjectShowcase() {
     return (
-        <section id="projects" className="py-24 container mx-auto px-4 md:px-6">
+        <section id="projects" className="py-24 container mx-auto max-w-6xl px-4 md:px-6">
             <div className="mb-16">
                 <h2 className="text-3xl text-center font-bold tracking-tight sm:text-4xl text-foreground">Featured Projects</h2>
             </div>
 
-            <div className="space-y-12">
+            <div className="space-y-16">
                 {portfolio.projects.map((project, index) => (
                     <motion.div
                         key={project.title}
@@ -36,9 +36,9 @@ export function ProjectShowcase() {
                             <div>
                                 <h3 className="text-2xl font-bold md:text-3xl text-foreground mb-2">{project.title}</h3>
                                 <div className="flex flex-wrap gap-2 text-sm">
-                                    {project.tech.map((t) => (
+                                    {project.tech.map((t, i) => (
                                         <span key={t} className="text-accent-blue font-medium">
-                                            {t} <span className="text-muted/30 mx-1">•</span>
+                                            {t} {i !== project.tech.length - 1 && <span className="text-muted/30 mx-1">•</span>}
                                         </span>
                                     ))}
                                 </div>
@@ -56,17 +56,7 @@ export function ProjectShowcase() {
                                         className="inline-flex items-center gap-2 text-sm font-medium text-foreground hover:text-accent-blue transition-colors bg-white/5 px-4 py-2 rounded-lg border border-white/10 hover:bg-white/10"
                                     >
                                         <ExternalLink className="h-4 w-4" />
-                                        Live Demo
-                                    </Link>
-                                )}
-                                {project.repo && (
-                                    <Link
-                                        href={project.repo}
-                                        target="_blank"
-                                        className="inline-flex items-center gap-2 text-sm font-medium text-foreground hover:text-accent-blue transition-colors bg-white/5 px-4 py-2 rounded-lg border border-white/10 hover:bg-white/10"
-                                    >
-                                        <Github className="h-4 w-4" />
-                                        Source Code
+                                        See Project
                                     </Link>
                                 )}
                             </div>
