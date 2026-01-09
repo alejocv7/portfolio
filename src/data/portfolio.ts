@@ -12,16 +12,16 @@ export const portfolio = {
     },
     skills: [
         {
-            category: "Software Development",
-            items: ["Python", "Java", "Git", "AWS", "Kafka", "Docker", "Jenkins"]
+            category: "Backend Development",
+            items: ["Java", "Python", "Spring Boot", "Flask", "Microservices", "REST APIs", "Event-Driven"],
         },
         {
-            category: "Robotics & Hardware",
-            items: ["ROS (Robot Operating System)", "OpenCV"],
+            category: "Cloud & DevOps",
+            items: ["AWS", "Kubernetes", "Docker", "Terraform", "Git", "Jenkins", "CI/CD", "Spinnaker"],
         },
         {
-            category: "Tools & Others",
-            items: ["Linux", "VS Code", "Git", "Docker", "Jenkins"],
+            category: "Data & Streaming",
+            items: ["Kafka", "Kinesis", "DynamoDB", "SQL", "Pandas"],
         },
     ],
     projects: [

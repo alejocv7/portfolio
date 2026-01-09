@@ -2,24 +2,24 @@
 
 import { motion } from "framer-motion";
 import { portfolio } from "@/data/portfolio";
-import { Code2, Cpu, Wrench } from "lucide-react";
+import { Code2, Cloud, Database } from "lucide-react";
 
 const icons = {
-    "Software Development": Code2,
-    "Robotics & Hardware": Cpu,
-    "Tools & Others": Wrench,
+    "Backend Development": Code2,
+    "Cloud & DevOps": Cloud,
+    "Data & Streaming": Database,
 };
 
 const titleColors = {
-    "Software Development": "text-accent-blue",
-    "Robotics & Hardware": "text-accent-purple",
-    "Tools & Others": "text-accent-emerald",
+    "Backend Development": "text-accent-blue",
+    "Cloud & DevOps": "text-accent-purple",
+    "Data & Streaming": "text-accent-emerald",
 };
 
 const bulletColors = {
-    "Software Development": "bg-accent-blue",
-    "Robotics & Hardware": "bg-accent-purple",
-    "Tools & Others": "bg-accent-emerald",
+    "Backend Development": "bg-accent-blue",
+    "Cloud & DevOps": "bg-accent-purple",
+    "Data & Streaming": "bg-accent-emerald",
 };
 
 export function Expertise() {
@@ -36,7 +36,7 @@ export function Expertise() {
 
                 <div className="grid gap-8 md:grid-cols-3">
                     {portfolio.skills.map((skill, index) => {
-                        const Icon = icons[skill.category as keyof typeof icons] || Wrench;
+                        const Icon = icons[skill.category as keyof typeof icons] || Code2;
                         const titleColor = titleColors[skill.category as keyof typeof titleColors] || "text-foreground";
                         const bgColor = titleColor.replace('text-', 'bg-') + "/10";
                         const borderColor = titleColor.replace('text-', 'border-') + "/20";

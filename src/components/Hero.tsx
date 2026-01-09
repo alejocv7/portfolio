@@ -6,9 +6,9 @@ import { ArrowRight } from "lucide-react";
 import { portfolio } from "@/data/portfolio";
 
 const categoryColors = {
-    "Software Development": "bg-accent-blue/10 text-accent-blue border-accent-blue/20 hover:border-accent-blue/50",
-    "Robotics & Hardware": "bg-accent-purple/10 text-accent-purple border-accent-purple/20 hover:border-accent-purple/50",
-    "Tools & Others": "bg-accent-emerald/10 text-accent-emerald border-accent-emerald/20 hover:border-accent-emerald/50",
+    "Backend Development": "bg-accent-blue/10 text-accent-blue border-accent-blue/20 hover:border-accent-blue/50",
+    "Cloud & DevOps": "bg-accent-purple/10 text-accent-purple border-accent-purple/20 hover:border-accent-purple/50",
+    "Data & Streaming": "bg-accent-emerald/10 text-accent-emerald border-accent-emerald/20 hover:border-accent-emerald/50",
 };
 
 export function Hero() {
