@@ -15,7 +15,7 @@ export function Hero() {
     return (
         <section className="relative flex min-h-[90vh] flex-col items-center justify-center overflow-hidden px-4 text-center md:px-6">
             {/* Background Gradient */}
-            <div className="absolute inset-0 -z-10 h-full w-full bg-[radial-gradient(ellipse_at_center,_var(--tw-gradient-stops))] from-accent-purple/10 via-background to-background" />
+            <div className="absolute inset-0 -z-10 h-full w-full bg-[radial-gradient(ellipse_at_center,var(--tw-gradient-stops))] from-accent-purple/10 via-background to-background" />
 
             <motion.div
                 initial={{ opacity: 0, y: 20 }}
@@ -24,14 +24,14 @@ export function Hero() {
                 className="max-w-4xl space-y-8"
             >
                 <div className="space-y-4">
-                    <h1 className="text-5xl font-extrabold tracking-tight sm:text-6xl md:text-7xl lg:text-8xl text-foreground">
+                    <h1 className="text-5xl md:text-7xl sm:text-6xl font-extrabold tracking-tight text-foreground">
                         Hi, I&apos;m <span className="text-gradient leading-tight">{portfolio.personal.name}</span>
                     </h1>
-                    <p className="mx-auto max-w-2xl text-lg text-muted md:text-xl font-medium">
+                    <p className="mx-auto max-w-2xl text-lg md:text-2xl sm:text-xl font-bold text-foreground">
                         {portfolio.personal.role}
                     </p>
-                    <p className="mx-auto max-w-2xl text-base text-muted/80 leading-relaxed italic">
-                        &ldquo;{portfolio.personal.bio}&rdquo;
+                    <p className="mx-auto max-w-2xl text-md md:text-lg text-muted/90 leading-relaxed">
+                        {portfolio.personal.bio}
                     </p>
                 </div>
 
@@ -60,21 +60,19 @@ export function Hero() {
                     ))}
                 </div>
 
-                <div className="flex flex-col items-center justify-center gap-4 sm:flex-row pt-6">
+                <div className="flex flex-row items-center justify-center gap-4 pt-6">
                     <Link
                         href="#projects"
-                        className="group flex items-center justify-center rounded-full bg-foreground px-8 py-3 text-sm font-bold text-background transition-all hover:scale-105"
+                        className="group flex w-36 items-center justify-center rounded-full bg-foreground py-3 text-sm font-bold text-background transition-all hover:scale-105"
                     >
                         View Projects
-                        <ArrowRight className="ml-2 h-4 w-4 transition-transform group-hover:translate-x-1" />
                     </Link>
                     <Link
                         href={portfolio.personal.socials.linkedin}
                         target="_blank"
-                        className="group flex items-center justify-center rounded-full border border-white/10 bg-white/5 px-8 py-3 text-sm font-bold backdrop-blur-sm transition-all hover:bg-white/10 hover:scale-105"
+                        className="group flex w-36 items-center justify-center rounded-full border border-white/10 bg-white/5 py-3 text-sm font-bold backdrop-blur-sm transition-all hover:bg-white/10 hover:scale-105"
                     >
                         Connect
-                        <ArrowRight className="ml-2 h-4 w-4 opacity-0 transition-all group-hover:translate-x-1 group-hover:opacity-100" />
                     </Link>
                 </div>
             </motion.div>
