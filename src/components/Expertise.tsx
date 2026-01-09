@@ -25,14 +25,14 @@ const bulletColors = {
 export function Expertise() {
     return (
         <section id="skills" className="py-24 container mx-auto px-4 md:px-6">
+            <div className="mb-12">
+                <h2 className="text-3xl text-center font-bold tracking-tight sm:text-4xl text-foreground">Technical Expertise</h2>
+            </div>
+
             <div className="max-w-6xl mx-auto rounded-3xl border border-white/10 bg-card/50 p-8 md:p-12 relative overflow-hidden">
                 {/* Decorative background blend */}
                 <div className="absolute top-0 right-0 -mt-20 -mr-20 w-80 h-80 bg-accent-blue/10 blur-3xl rounded-full pointer-events-none" />
 
-                <div className="mb-12">
-                    <h2 className="text-3xl font-bold tracking-tight sm:text-4xl text-foreground">Technical Expertise</h2>
-                    <p className="mt-4 text-muted">A blend of software engineering and robotics.</p>
-                </div>
 
                 <div className="grid gap-8 md:grid-cols-3">
                     {portfolio.skills.map((skill, index) => {
@@ -49,7 +49,7 @@ export function Expertise() {
                                 whileInView={{ opacity: 1, y: 0 }}
                                 transition={{ delay: index * 0.1 }}
                                 viewport={{ once: true }}
-                                className={`relative overflow-hidden rounded-2xl border ${borderColor} bg-background/40 p-6 transition-all hover:bg-background/60 group hover:-translate-y-1`}
+                                className={`relative overflow-hidden rounded-2xl border ${borderColor} bg-background/40 p-6 transition-all hover:${bgColor} group hover:border-2`}
                             >
                                 <div className="flex items-center gap-4 mb-6">
                                     <div className={`inline-flex items-center justify-center rounded-xl ${bgColor} p-2.5 border ${borderColor}`}>
@@ -58,7 +58,7 @@ export function Expertise() {
                                     <h3 className={`text-lg font-bold ${titleColor}`}>{skill.category}</h3>
                                 </div>
 
-                                <ul className="space-y-3.5 text-muted">
+                                <ul className="space-y-1.5 md:space-y-2 text-xs md:text-sm text-muted">
                                     {skill.items.map((item) => (
                                         <li key={item} className="flex items-center text-sm">
                                             <span className={`mr-3 h-1.5 w-1.5 shrink-0 rounded-full ${bulletColor}`} />
