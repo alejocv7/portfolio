@@ -1,8 +1,8 @@
 export const portfolio = {
     personal: {
         name: "Alejandro Canizares",
-        role: "Software & Robotics Engineer",
-        bio: "I develop software for robotics, automation, and web applications. Passionate about bringing hardware to life with code.",
+        role: "Senior Software Engineer - Backend",
+        bio: "5+ years of experience developing microservices, rest APIs, and event-driven systems with a focus on scalability, reliability, and clean architecture.",
         location: "Unknown", // Placeholder, not in original
         socials: {
             linkedin: "https://www.linkedin.com/in/alejandrocanizares/",
@@ -13,7 +13,7 @@ export const portfolio = {
     skills: [
         {
             category: "Software Development",
-            items: ["Python", "C++", "JavaScript", "HTML/CSS", "Git"],
+            items: ["Python", "Java", "Git", "AWS", "Kafka", "Docker", "Jenkins"]
         },
         {
             category: "Robotics & Hardware",
