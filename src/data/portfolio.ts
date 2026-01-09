@@ -3,7 +3,7 @@ export const portfolio = {
         name: "Alejandro Canizares",
         role: "Senior Software Engineer - Backend",
         bio: "5+ years of experience developing microservices, rest APIs, and event-driven systems with a focus on scalability, reliability, and clean architecture.",
-        location: "Unknown", // Placeholder, not in original
+        location: "Unknown",
         socials: {
             linkedin: "https://www.linkedin.com/in/alejandrocanizares/",
             github: "https://github.com/alejocv7",
@@ -28,7 +28,7 @@ export const portfolio = {
         {
             title: "Tic-Tac-Toe",
             description: "Two player tic-tac-toe game in Python, which can be played on the terminal or as a GUI application.",
-            tech: ["Python", "GUI", "Terminal"],
+            tech: ["Python", "Pygame"],
             link: "https://github.com/alejocv7/tic-tac-toe",
             image: "/legacy_v1/images/tic-tac-toe/tic_tac_toe_main.jpg",
             repo: "https://github.com/alejocv7/tic-tac-toe",
@@ -36,7 +36,7 @@ export const portfolio = {
         {
             title: "Blackjack",
             description: "Blackjack game for one player against the computer.",
-            tech: ["Python", "Game Logic"],
+            tech: ["Python"],
             link: "https://github.com/alejocv7/blackjack",
             image: "/legacy_v1/images/blackjack/blackjack_main.jpg",
             repo: "https://github.com/alejocv7/blackjack",
@@ -44,9 +44,9 @@ export const portfolio = {
         {
             title: "Excel Compare",
             description: "Script tool used for comparing excel docs. It produces a new excel file highlighting the difference between the original ones.",
-            tech: ["Python", "Pandas", "Excel"],
+            tech: ["Python", "Pandas"],
             link: "https://github.com/alejocv7/py-tools/blob/main/scripts/excel_compare.py",
-            image: "/legacy_v1/images/python.jpeg", // Placeholder from original
+            image: "/legacy_v1/images/python.jpeg",
             repo: "https://github.com/alejocv7/py-tools",
         },
         {
@@ -60,7 +60,7 @@ export const portfolio = {
         {
             title: "Roomba Control",
             description: "ROS project to control an iRobot Roomba. Features obstacle detection, autonomous movement, and joystick control.",
-            tech: ["ROS", "Robotics", "Sensors"],
+            tech: ["C++", "ROS", "Robotics"],
             link: "https://github.com/alejocv7/ros-roomba-control",
             image: "/legacy_v1/images/roomba/roomba_main.jpg",
             repo: "https://github.com/alejocv7/ros-roomba-control",
