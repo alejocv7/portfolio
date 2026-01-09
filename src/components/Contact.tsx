@@ -12,7 +12,7 @@ export function Contact() {
                 initial={{ opacity: 0, scale: 0.95 }}
                 whileInView={{ opacity: 1, scale: 1 }}
                 transition={{ duration: 0.5 }}
-                className="mx-auto max-w-2xl rounded-3xl bg-gradient-to-br from-accent-blue/10 to-accent-purple/10 p-12 border border-white/5"
+                className="mx-auto max-w-2xl rounded-3xl bg-card p-12 border border-white/5"
             >
                 <h2 className="text-3xl font-bold tracking-tight sm:text-4xl mb-4">Let&apos;s Work Together</h2>
                 <p className="text-muted mb-8 text-lg">

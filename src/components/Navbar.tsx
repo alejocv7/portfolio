@@ -6,14 +6,15 @@ import { Github, Linkedin, Terminal } from "lucide-react";
 export function Navbar() {
     return (
         <header className="fixed top-0 z-50 w-full border-b border-white/10 bg-background/80 backdrop-blur-md">
-            <div className="container mx-auto flex h-16 items-center justify-between px-4 md:px-6">
-                <Link href="/" className="flex items-center gap-2 text-lg font-bold tracking-tighter">
+            <div className="container mx-auto flex h-16 items-center px-4 md:px-6 relative">
+                <Link href="/" className="flex items-center gap-2 text-lg font-bold tracking-tighter shrink-0">
                     <Terminal className="h-6 w-6 text-accent-blue" />
-                    <span className="bg-gradient-to-r from-white to-gray-400 bg-clip-text text-transparent">
+                    <span className="font-bold text-foreground">
                         Alejandro Canizares
                     </span>
                 </Link>
-                <nav className="flex items-center gap-6 text-sm font-medium">
+
+                <nav className="absolute left-1/2 -translate-x-1/2 hidden md:flex items-center gap-8 text-sm font-medium">
                     <Link href="#about" className="text-muted hover:text-foreground transition-colors">
                         About
                     </Link>
@@ -27,7 +28,8 @@ export function Navbar() {
                         Contact
                     </Link>
                 </nav>
-                <div className="hidden md:flex items-center gap-4">
+
+                <div className="ml-auto flex items-center gap-4 shrink-0">
                     <Link
                         href="https://github.com/alejocv7"
                         target="_blank"
