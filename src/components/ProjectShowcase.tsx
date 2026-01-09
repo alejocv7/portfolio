@@ -10,8 +10,7 @@ export function ProjectShowcase() {
     return (
         <section id="projects" className="py-24 container mx-auto px-4 md:px-6">
             <div className="mb-16">
-                <h2 className="text-3xl font-bold tracking-tight sm:text-4xl text-foreground">Featured Projects</h2>
-                <p className="mt-4 text-muted">A selection of my work in robotics and software.</p>
+                <h2 className="text-3xl text-center font-bold tracking-tight sm:text-4xl text-foreground">Featured Projects</h2>
             </div>
 
             <div className="space-y-12">
@@ -22,7 +21,7 @@ export function ProjectShowcase() {
                         whileInView={{ opacity: 1, y: 0 }}
                         transition={{ delay: index * 0.1 }}
                         viewport={{ once: true }}
-                        className="group relative grid gap-8 rounded-2xl border border-white/10 bg-card p-8 lg:grid-cols-2 lg:gap-12 hover:border-accent-blue/30 transition-all hover:-translate-y-1"
+                        className="group relative grid gap-8 rounded-2xl border border-white/10 bg-card/50 p-8 lg:grid-cols-2 lg:gap-12 hover:border-accent-blue/30 transition-all hover:-translate-y-1"
                     >
                         <div className={`relative aspect-video overflow-hidden rounded-xl border border-white/10 ${index % 2 === 1 ? 'lg:order-last' : ''}`}>
                             <Image
