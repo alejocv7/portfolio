@@ -8,7 +8,7 @@ import { portfolio } from "@/data/portfolio";
 
 export function ProjectShowcase() {
     return (
-        <section id="projects" className="py-24 container mx-auto max-w-6xl px-4 md:px-6">
+        <section id="projects" className="py-20 container mx-auto max-w-6xl px-4 md:px-6">
             <div className="mb-16">
                 <h2 className="text-3xl text-center font-bold tracking-tight sm:text-4xl text-foreground">Featured Projects</h2>
             </div>
