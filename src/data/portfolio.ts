@@ -14,14 +14,17 @@ export const portfolio = {
         {
             category: "Backend Development",
             items: ["Java", "Python", "Spring Boot", "Flask", "Microservices", "REST APIs", "Event-Driven"],
+            featured: ["Java", "Python"],
         },
         {
             category: "Cloud & DevOps",
             items: ["AWS", "Kubernetes", "Docker", "Terraform", "Git", "Jenkins", "CI/CD", "Spinnaker"],
+            featured: ["AWS", "Terraform", "Kubernetes"]
         },
         {
             category: "Data & Streaming",
             items: ["Kafka", "Kinesis", "DynamoDB", "SQL", "Pandas"],
+            featured: ["Kafka", "Kinesis", "NoSQL/SQL"]
         },
     ],
     projects: [

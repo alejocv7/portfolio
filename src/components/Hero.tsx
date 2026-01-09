@@ -38,7 +38,7 @@ export function Hero() {
                 {/* Floating Bubble Tech Stack */}
                 <div className="flex flex-wrap justify-center gap-3 pt-4">
                     {portfolio.skills.map((category) => (
-                        category.items.map((skill, index) => {
+                        category.featured.map((skill, index) => {
                             const colorClass = categoryColors[category.category as keyof typeof categoryColors] || "bg-white/5 text-muted border-white/10";
 
                             return (
