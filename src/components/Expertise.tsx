@@ -16,48 +16,60 @@ const titleColors = {
     "Tools & Others": "text-accent-emerald",
 };
 
+const bulletColors = {
+    "Software Development": "bg-accent-blue",
+    "Robotics & Hardware": "bg-accent-purple",
+    "Tools & Others": "bg-accent-emerald",
+};
+
 export function Expertise() {
     return (
         <section id="skills" className="py-24 container mx-auto px-4 md:px-6">
-            <div className="mb-12">
-                <h2 className="text-3xl font-bold tracking-tight sm:text-4xl text-foreground">Technical Expertise</h2>
-                <p className="mt-4 text-muted">A blend of software engineering and robotics.</p>
-            </div>
+            <div className="max-w-6xl mx-auto rounded-3xl border border-white/10 bg-card/50 p-8 md:p-12 relative overflow-hidden">
+                {/* Decorative background blend */}
+                <div className="absolute top-0 right-0 -mt-20 -mr-20 w-80 h-80 bg-accent-blue/10 blur-3xl rounded-full pointer-events-none" />
 
-            <div className="grid gap-8 md:grid-cols-3">
-                {portfolio.skills.map((skill, index) => {
-                    const Icon = icons[skill.category as keyof typeof icons] || Wrench;
-                    const titleColor = titleColors[skill.category as keyof typeof titleColors] || "text-foreground";
-                    const bgColor = titleColor.replace('text-', 'bg-') + "/5";
-                    const borderColor = titleColor.replace('text-', 'border-') + "/20";
+                <div className="mb-12">
+                    <h2 className="text-3xl font-bold tracking-tight sm:text-4xl text-foreground">Technical Expertise</h2>
+                    <p className="mt-4 text-muted">A blend of software engineering and robotics.</p>
+                </div>
 
-                    return (
-                        <motion.div
-                            key={skill.category}
-                            initial={{ opacity: 0, scale: 0.95 }}
-                            whileInView={{ opacity: 1, scale: 1 }}
-                            transition={{ delay: index * 0.1 }}
-                            viewport={{ once: true }}
-                            className={`relative overflow-hidden rounded-2xl border ${borderColor} bg-card p-8 transition-all hover:border-opacity-50 group hover:-translate-y-1`}
-                        >
-                            {/* Subtle gradient glow */}
-                            <div className={`absolute -top-10 -right-10 w-32 h-32 blur-3xl rounded-full opacity-20 pointer-events-none ${titleColor.replace('text-', 'bg-')}`} />
+                <div className="grid gap-8 md:grid-cols-3">
+                    {portfolio.skills.map((skill, index) => {
+                        const Icon = icons[skill.category as keyof typeof icons] || Wrench;
+                        const titleColor = titleColors[skill.category as keyof typeof titleColors] || "text-foreground";
+                        const bgColor = titleColor.replace('text-', 'bg-') + "/10";
+                        const borderColor = titleColor.replace('text-', 'border-') + "/20";
+                        const bulletColor = bulletColors[skill.category as keyof typeof bulletColors] || "bg-foreground";
 
-                            <div className={`mb-6 inline-flex items-center justify-center rounded-xl ${bgColor} p-3 border ${borderColor}`}>
-                                <Icon className={`h-6 w-6 ${titleColor}`} />
-                            </div>
-                            <h3 className={`mb-4 text-xl font-bold ${titleColor}`}>{skill.category}</h3>
-                            <ul className="space-y-4 text-muted">
-                                {skill.items.map((item) => (
-                                    <li key={item} className="flex items-center text-sm">
-                                        <span className={`mr-3 h-1.5 w-1.5 rounded-full ${titleColor.replace('text-', 'bg-')}`} />
-                                        {item}
-                                    </li>
-                                ))}
-                            </ul>
-                        </motion.div>
-                    );
-                })}
+                        return (
+                            <motion.div
+                                key={skill.category}
+                                initial={{ opacity: 0, y: 20 }}
+                                whileInView={{ opacity: 1, y: 0 }}
+                                transition={{ delay: index * 0.1 }}
+                                viewport={{ once: true }}
+                                className={`relative overflow-hidden rounded-2xl border ${borderColor} bg-background/40 p-6 transition-all hover:bg-background/60 group hover:-translate-y-1`}
+                            >
+                                <div className="flex items-center gap-4 mb-6">
+                                    <div className={`inline-flex items-center justify-center rounded-xl ${bgColor} p-2.5 border ${borderColor}`}>
+                                        <Icon className={`h-5 w-5 ${titleColor}`} />
+                                    </div>
+                                    <h3 className={`text-lg font-bold ${titleColor}`}>{skill.category}</h3>
+                                </div>
+
+                                <ul className="space-y-3.5 text-muted">
+                                    {skill.items.map((item) => (
+                                        <li key={item} className="flex items-center text-sm">
+                                            <span className={`mr-3 h-1.5 w-1.5 shrink-0 rounded-full ${bulletColor}`} />
+                                            {item}
+                                        </li>
+                                    ))}
+                                </ul>
+                            </motion.div>
+                        );
+                    })}
+                </div>
             </div>
         </section>
     );
