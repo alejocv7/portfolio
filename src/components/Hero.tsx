@@ -2,7 +2,7 @@
 
 import { motion } from "framer-motion";
 import Link from "next/link";
-import { ArrowRight } from "lucide-react";
+import { ArrowRight, ArrowDown, ChevronDown } from "lucide-react";
 import { portfolio } from "@/data/portfolio";
 
 const categoryColors = {
@@ -12,6 +12,14 @@ const categoryColors = {
 };
 
 export function Hero() {
+    const handleScrollToProjects = (e: React.MouseEvent<HTMLAnchorElement>) => {
+        e.preventDefault();
+        const projectsSection = document.getElementById('projects');
+        if (projectsSection) {
+            projectsSection.scrollIntoView({ behavior: 'smooth', block: 'start' });
+        }
+    };
+
     return (
         <section className="relative flex min-h-[90vh] flex-col items-center justify-center overflow-hidden px-4 text-center md:px-6">
             {/* Background Gradient */}
@@ -59,18 +67,43 @@ export function Hero() {
                 <div className="flex flex-row items-center justify-center gap-4 pt-6">
                     <Link
                         href="#projects"
-                        className="group flex w-36 items-center justify-center rounded-full bg-foreground py-3 text-sm font-bold text-background transition-all hover:scale-105"
+                        onClick={handleScrollToProjects}
+                        className="group flex w-36 items-center justify-center gap-2 rounded-full bg-foreground py-3 text-sm font-bold text-background transition-all hover:scale-105"
                     >
                         View Projects
+                        <ArrowDown className="h-4 w-4" />
                     </Link>
                     <Link
                         href={portfolio.personal.socials.linkedin}
                         target="_blank"
-                        className="group flex w-36 items-center justify-center rounded-full border border-white/10 bg-white/5 py-3 text-sm font-bold backdrop-blur-sm transition-all hover:bg-white/10 hover:scale-105"
+                        className="group flex w-36 items-center justify-center gap-2 rounded-full border border-white/10 bg-white/5 py-3 text-sm font-bold backdrop-blur-sm transition-all hover:bg-white/10 hover:scale-105"
                     >
                         Connect
+                        <ArrowRight className="h-4 w-4" />
                     </Link>
                 </div>
+            </motion.div>
+
+            {/* Scroll Indicator */}
+            <motion.div
+                initial={{ opacity: 0 }}
+                animate={{ opacity: 1 }}
+                transition={{ delay: 1, duration: 0.5 }}
+                className="absolute bottom-8 flex flex-col items-center gap-2"
+            >
+                <p className="text-xs font-medium text-muted/60 tracking-wider uppercase">
+                    Scroll to explore
+                </p>
+                <motion.div
+                    animate={{ y: [0, 8, 0] }}
+                    transition={{
+                        duration: 1.5,
+                        repeat: Infinity,
+                        ease: "easeInOut"
+                    }}
+                >
+                    <ChevronDown className="h-5 w-5 text-muted/60" />
+                </motion.div>
             </motion.div>
         </section>
     );
