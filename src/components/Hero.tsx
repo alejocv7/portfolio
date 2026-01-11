@@ -64,6 +64,7 @@ export function Hero() {
                     ))}
                 </div>
 
+                {/* Quick buttons */}
                 <div className="flex flex-row items-center justify-center gap-4 pt-6">
                     <Link
                         href="#projects"
@@ -84,26 +85,22 @@ export function Hero() {
                 </div>
             </motion.div>
 
-            {/* Scroll Indicator */}
+            {/* Scroll to explore */}
             <motion.div
                 initial={{ opacity: 0 }}
-                animate={{ opacity: 1 }}
-                transition={{ delay: 1, duration: 0.5 }}
-                className="absolute bottom-8 flex flex-col items-center gap-2"
-            >
-                <p className="text-xs font-medium text-muted/60 tracking-wider uppercase">
-                    Scroll to explore
-                </p>
-                <motion.div
-                    animate={{ y: [0, 8, 0] }}
-                    transition={{
+                animate={{ opacity: 1, y: [0, 8, 0] }}
+                transition={{
+                    opacity: { delay: 0.5, duration: 0.5 },
+                    y: {
                         duration: 1.5,
                         repeat: Infinity,
                         ease: "easeInOut"
-                    }}
-                >
-                    <ChevronDown className="h-5 w-5 text-muted/60" />
-                </motion.div>
+                    }
+                }}
+                className="absolute bottom-8 flex flex-col items-center gap-2"
+            >
+                <p className="text-xs font-medium text-muted/60 tracking-wider uppercase">Scroll to explore</p>
+                <ChevronDown className="h-5 w-5 text-muted/60" />
             </motion.div>
         </section>
     );
