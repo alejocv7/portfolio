@@ -5,73 +5,81 @@ import { portfolio } from "@/data/portfolio";
 import { Code2, Cloud, Database } from "lucide-react";
 
 const icons = {
-    "Backend Development": Code2,
-    "Cloud & DevOps": Cloud,
-    "Data & Streaming": Database,
+  "Backend Development": Code2,
+  "Cloud & DevOps": Cloud,
+  "Data & Streaming": Database,
 };
 
 const colorMap = {
-    "Backend Development": "blue",
-    "Cloud & DevOps": "purple",
-    "Data & Streaming": "emerald",
+  "Backend Development": "blue",
+  "Cloud & DevOps": "purple",
+  "Data & Streaming": "emerald",
 };
 
 const getStyles = (category: string) => {
-    const color = colorMap[category as keyof typeof colorMap] || "blue";
-    return {
-        text: `text-accent-${color}`,
-        bg: `bg-accent-${color}/10`,
-        border: `border-accent-${color}/20`,
-        bullet: `bg-accent-${color}`,
-        hover: `hover:bg-accent-${color}/15 hover:border-accent-${color}/50`,
-    };
+  const color = colorMap[category as keyof typeof colorMap] || "blue";
+  return {
+    text: `text-accent-${color}`,
+    bg: `bg-accent-${color}/10`,
+    border: `border-accent-${color}/20`,
+    bullet: `bg-accent-${color}`,
+    hover: `hover:bg-accent-${color}/15 hover:border-accent-${color}/50`,
+  };
 };
 
 export function Expertise() {
-    return (
-        <section id="skills" className="py-20 w-full max-w-5xl mx-auto px-6">
-            <div className="mb-12">
-                <h2 className="text-3xl text-center font-bold tracking-tight sm:text-4xl text-foreground">Technical Expertise</h2>
-            </div>
+  return (
+    <section id="skills" className="py-20 w-full max-w-5xl mx-auto px-6">
+      <div className="mb-12">
+        <h2 className="text-3xl text-center font-bold tracking-tight sm:text-4xl text-foreground">
+          Technical Expertise
+        </h2>
+      </div>
 
-            <div className="rounded-3xl border border-white/10 bg-card/50 p-4 md:p-8 relative overflow-hidden">
-                {/* Decorative background blend */}
-                <div className="absolute top-0 right-0 -mt-20 -mr-20 w-80 h-80 bg-accent-blue/10 blur-3xl rounded-full pointer-events-none" />
+      <div className="rounded-3xl border border-white/10 bg-card/50 p-4 md:p-8 relative overflow-hidden">
+        {/* Decorative background blend */}
+        <div className="absolute top-0 right-0 -mt-20 -mr-20 w-80 h-80 bg-accent-blue/10 blur-3xl rounded-full pointer-events-none" />
 
-                <div className="grid gap-8 md:grid-cols-3">
-                    {portfolio.skills.map((skill, index) => {
-                        const Icon = icons[skill.category as keyof typeof icons] || Code2;
-                        const styles = getStyles(skill.category);
+        <div className="grid gap-8 md:grid-cols-3">
+          {portfolio.skills.map((skill, index) => {
+            const Icon = icons[skill.category as keyof typeof icons] || Code2;
+            const styles = getStyles(skill.category);
 
-                        return (
-                            <motion.div
-                                key={skill.category}
-                                initial={{ opacity: 0, y: 20 }}
-                                whileInView={{ opacity: 1, y: 0 }}
-                                transition={{ delay: index * 0.1 }}
-                                viewport={{ once: true }}
-                                className={`relative overflow-hidden rounded-2xl border ${styles.border} bg-background/40 p-6 transition-all duration-300 ${styles.hover} group`}
-                            >
-                                <div className="flex items-center gap-4 mb-6">
-                                    <div className={`inline-flex items-center justify-center rounded-xl ${styles.bg} p-2.5 border ${styles.border}`}>
-                                        <Icon className={`h-5 w-5 ${styles.text}`} />
-                                    </div>
-                                    <h3 className={`text-lg font-bold ${styles.text}`}>{skill.category}</h3>
-                                </div>
-
-                                <ul className="space-y-1.5 md:space-y-2 text-xs md:text-sm text-muted">
-                                    {skill.items.map((item) => (
-                                        <li key={item} className="flex items-center text-sm">
-                                            <span className={`mr-3 h-1.5 w-1.5 shrink-0 rounded-full ${styles.bullet}`} />
-                                            {item}
-                                        </li>
-                                    ))}
-                                </ul>
-                            </motion.div>
-                        );
-                    })}
+            return (
+              <motion.div
+                key={skill.category}
+                initial={{ opacity: 0, y: 20 }}
+                whileInView={{ opacity: 1, y: 0 }}
+                transition={{ delay: index * 0.1 }}
+                viewport={{ once: true }}
+                className={`relative overflow-hidden rounded-2xl border ${styles.border} bg-background/40 p-6 transition-all duration-300 ${styles.hover} group`}
+              >
+                <div className="flex items-center gap-4 mb-6">
+                  <div
+                    className={`inline-flex items-center justify-center rounded-xl ${styles.bg} p-2.5 border ${styles.border}`}
+                  >
+                    <Icon className={`h-5 w-5 ${styles.text}`} />
+                  </div>
+                  <h3 className={`text-lg font-bold ${styles.text}`}>
+                    {skill.category}
+                  </h3>
                 </div>
-            </div>
-        </section>
-    );
+
+                <ul className="space-y-1.5 md:space-y-2 text-xs md:text-sm text-muted">
+                  {skill.items.map((item) => (
+                    <li key={item} className="flex items-center text-sm">
+                      <span
+                        className={`mr-3 h-1.5 w-1.5 shrink-0 rounded-full ${styles.bullet}`}
+                      />
+                      {item}
+                    </li>
+                  ))}
+                </ul>
+              </motion.div>
+            );
+          })}
+        </div>
+      </div>
+    </section>
+  );
 }
