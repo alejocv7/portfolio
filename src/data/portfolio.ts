@@ -13,18 +13,15 @@ export const portfolio = {
     skills: [
         {
             category: "Backend Development",
-            items: ["Java", "Python", "Spring Boot", "Flask", "Microservices", "REST APIs", "Event-Driven"],
-            featured: ["Java", "Python"],
+            items: ["Java", "Python", "Microservices", "Spring Boot", "Flask", "REST APIs", "Event-Driven"],
         },
         {
             category: "Cloud & DevOps",
-            items: ["AWS", "Kubernetes", "Docker", "Terraform", "Git", "Jenkins", "CI/CD", "Spinnaker"],
-            featured: ["AWS", "Terraform", "Kubernetes"]
+            items: ["AWS", "Terraform", "Kubernetes", "Docker", "Git", "Jenkins", "CI/CD", "Spinnaker"],
         },
         {
             category: "Data & Streaming",
-            items: ["Kafka", "Kinesis", "DynamoDB", "SQL", "Pandas"],
-            featured: ["Kafka", "Kinesis", "NoSQL/SQL"]
+            items: ["Kafka", "Kinesis", "NoSQL/SQL", "DynamoDB", "Pandas"],
         },
     ],
     projects: [
@@ -34,13 +31,6 @@ export const portfolio = {
             tech: ["Python", "Pygame"],
             link: "https://github.com/alejocv7/tic-tac-toe",
             image: "/legacy_v1/images/tic-tac-toe/tic_tac_toe_main.jpg",
-        },
-        {
-            title: "Blackjack",
-            description: "Blackjack game for one player against the computer.",
-            tech: ["Python"],
-            link: "https://github.com/alejocv7/blackjack",
-            image: "/legacy_v1/images/blackjack/blackjack_main.jpg",
         },
         {
             title: "Excel Compare",
@@ -65,9 +55,9 @@ export const portfolio = {
         },
         {
             title: "Prosthetic Arm",
-            description: "IEEE published article on low-cost robotic prosthetics using 3D printing. Prototypes included a glove-controlled hand and EMG-controlled arm.",
+            description: "IEEE published article on low-cost robotic prosthetics using 3D printing. Prototypes included a glove-controlled hand and EMG-controlled arm. Finger motions were controlled by servomotors, and the rotation of each servomotor was achieved using a microcontroller.",
             tech: ["3D Printing", "Microcontrollers", "EMG Sensors", "C++"],
-            link: "legacy_v1/projects/3d_printed_robotic_prosthetic_arm.html",
+            link: "https://ieeexplore.ieee.org/document/8261579",
             image: "/legacy_v1/images/Prosthetic Arm/mano_main.jpg",
         },
     ],
