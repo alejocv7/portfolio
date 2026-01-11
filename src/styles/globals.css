@@ -55,5 +55,5 @@ h6 {
 }
 
 @utility text-gradient {
-  @apply bg-clip-text text-transparent bg-gradient-to-r from-accent-blue via-accent-purple to-accent-emerald;
+  @apply bg-clip-text text-transparent bg-linear-to-r from-accent-blue via-accent-purple to-accent-emerald;
 }
