@@ -10,16 +10,21 @@ const icons = {
     "Data & Streaming": Database,
 };
 
-const titleColors = {
-    "Backend Development": "text-accent-blue",
-    "Cloud & DevOps": "text-accent-purple",
-    "Data & Streaming": "text-accent-emerald",
+const colorMap = {
+    "Backend Development": "blue",
+    "Cloud & DevOps": "purple",
+    "Data & Streaming": "emerald",
 };
 
-const bulletColors = {
-    "Backend Development": "bg-accent-blue",
-    "Cloud & DevOps": "bg-accent-purple",
-    "Data & Streaming": "bg-accent-emerald",
+const getStyles = (category: string) => {
+    const color = colorMap[category as keyof typeof colorMap] || "blue";
+    return {
+        text: `text-accent-${color}`,
+        bg: `bg-accent-${color}/10`,
+        border: `border-accent-${color}/20`,
+        bullet: `bg-accent-${color}`,
+        hover: `hover:bg-accent-${color}/15 hover:border-accent-${color}/50`,
+    };
 };
 
 export function Expertise() {
@@ -33,14 +38,10 @@ export function Expertise() {
                 {/* Decorative background blend */}
                 <div className="absolute top-0 right-0 -mt-20 -mr-20 w-80 h-80 bg-accent-blue/10 blur-3xl rounded-full pointer-events-none" />
 
-
                 <div className="grid gap-8 md:grid-cols-3">
                     {portfolio.skills.map((skill, index) => {
                         const Icon = icons[skill.category as keyof typeof icons] || Code2;
-                        const titleColor = titleColors[skill.category as keyof typeof titleColors] || "text-foreground";
-                        const bgColor = titleColor.replace('text-', 'bg-') + "/10";
-                        const borderColor = titleColor.replace('text-', 'border-') + "/20";
-                        const bulletColor = bulletColors[skill.category as keyof typeof bulletColors] || "bg-foreground";
+                        const styles = getStyles(skill.category);
 
                         return (
                             <motion.div
@@ -49,19 +50,19 @@ export function Expertise() {
                                 whileInView={{ opacity: 1, y: 0 }}
                                 transition={{ delay: index * 0.1 }}
                                 viewport={{ once: true }}
-                                className={`relative overflow-hidden rounded-2xl border ${borderColor} bg-background/40 p-6 transition-all hover:${bgColor} group hover:border-2`}
+                                className={`relative overflow-hidden rounded-2xl border ${styles.border} bg-background/40 p-6 transition-all duration-300 ${styles.hover} group`}
                             >
                                 <div className="flex items-center gap-4 mb-6">
-                                    <div className={`inline-flex items-center justify-center rounded-xl ${bgColor} p-2.5 border ${borderColor}`}>
-                                        <Icon className={`h-5 w-5 ${titleColor}`} />
+                                    <div className={`inline-flex items-center justify-center rounded-xl ${styles.bg} p-2.5 border ${styles.border}`}>
+                                        <Icon className={`h-5 w-5 ${styles.text}`} />
                                     </div>
-                                    <h3 className={`text-lg font-bold ${titleColor}`}>{skill.category}</h3>
+                                    <h3 className={`text-lg font-bold ${styles.text}`}>{skill.category}</h3>
                                 </div>
 
                                 <ul className="space-y-1.5 md:space-y-2 text-xs md:text-sm text-muted">
                                     {skill.items.map((item) => (
                                         <li key={item} className="flex items-center text-sm">
-                                            <span className={`mr-3 h-1.5 w-1.5 shrink-0 rounded-full ${bulletColor}`} />
+                                            <span className={`mr-3 h-1.5 w-1.5 shrink-0 rounded-full ${styles.bullet}`} />
                                             {item}
                                         </li>
                                     ))}
