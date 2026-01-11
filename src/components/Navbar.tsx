@@ -3,6 +3,13 @@
 import Link from "next/link";
 import { Github, Linkedin, Terminal } from "lucide-react";
 
+const NAV_ITEMS = [
+  { href: "#about", label: "About" },
+  { href: "#skills", label: "Skills" },
+  { href: "#projects", label: "Projects" },
+  { href: "#contact", label: "Contact" },
+];
+
 export function Navbar() {
   return (
     <header className="fixed top-0 z-50 w-full border-b border-white/10 bg-background/80 backdrop-blur-md">
@@ -16,49 +23,34 @@ export function Navbar() {
         </Link>
 
         <nav className="absolute hidden md:flex items-center gap-8 text-sm font-medium">
-          <Link
-            href="#about"
-            className="text-muted hover:text-foreground transition-colors"
-          >
-            About
-          </Link>
-          <Link
-            href="#skills"
-            className="text-muted hover:text-foreground transition-colors"
-          >
-            Skills
-          </Link>
-          <Link
-            href="#projects"
-            className="text-muted hover:text-foreground transition-colors"
-          >
-            Projects
-          </Link>
-          <Link
-            href="#contact"
-            className="text-muted hover:text-foreground transition-colors"
-          >
-            Contact
-          </Link>
+          {NAV_ITEMS.map(({ href, label }) => (
+            <Link
+              key={href}
+              href={href}
+              className="text-muted hover:text-foreground transition-colors"
+            >
+              {label}
+            </Link>
+          ))}
         </nav>
 
         <div className="ml-auto flex items-center gap-4 shrink-0">
-          <Link
+          <a
             href="https://github.com/alejocv7"
             target="_blank"
             className="text-muted hover:text-foreground transition-colors"
           >
             <Github className="h-5 w-5" />
             <span className="sr-only">GitHub</span>
-          </Link>
-          <Link
+          </a>
+          <a
             href="https://www.linkedin.com/in/alejandrocanizares/"
             target="_blank"
             className="text-muted hover:text-foreground transition-colors"
           >
             <Linkedin className="h-5 w-5" />
             <span className="sr-only">LinkedIn</span>
-          </Link>
+          </a>
         </div>
       </div>
     </header>
