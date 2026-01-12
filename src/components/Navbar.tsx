@@ -1,8 +1,8 @@
 "use client";
 
-import { ButtonLink } from "@/components/ButtonLink";
+import { ButtonLink } from "@/components/ui/ButtonLink";
 import { Terminal } from "lucide-react";
-import { SocialLinks } from "@/components/SocialLinks";
+import { SocialLinks } from "@/components/ui/SocialLinks";
 
 const NAV_ITEMS = [
   { href: "#about", label: "About" },

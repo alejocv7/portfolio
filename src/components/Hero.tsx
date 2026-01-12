@@ -1,7 +1,7 @@
 "use client";
 
 import { motion } from "framer-motion";
-import { ButtonLink } from "@/components/ButtonLink";
+import { ButtonLink } from "@/components/ui/ButtonLink";
 import { ArrowRight, ChevronDown, ExternalLink } from "lucide-react";
 import { portfolio } from "@/data/portfolio";
 

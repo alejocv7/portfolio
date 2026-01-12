@@ -1,9 +1,9 @@
 "use client";
 
-import { Section } from "@/components/Section";
-import { Card } from "@/components/Card";
+import { Section } from "@/components/ui/Section";
+import { Card } from "@/components/ui/Card";
 import Image from "next/image";
-import { ButtonLink } from "@/components/ButtonLink";
+import { ButtonLink } from "@/components/ui/ButtonLink";
 import { ExternalLink } from "lucide-react";
 import { portfolio } from "@/data/portfolio";
 

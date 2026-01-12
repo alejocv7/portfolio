@@ -2,8 +2,8 @@
 
 import { motion } from "framer-motion";
 import { portfolio } from "@/data/portfolio";
-import { Section } from "@/components/Section";
-import { Card } from "@/components/Card";
+import { Section } from "@/components/ui/Section";
+import { Card } from "@/components/ui/Card";
 import { Code2, Cloud, Database } from "lucide-react";
 
 const icons = {

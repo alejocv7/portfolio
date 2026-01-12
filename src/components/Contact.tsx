@@ -1,8 +1,8 @@
-import { Section } from "@/components/Section";
-import { Card } from "@/components/Card";
+import { Section } from "@/components/ui/Section";
+import { Card } from "@/components/ui/Card";
 import { Linkedin } from "lucide-react";
 import { portfolio } from "@/data/portfolio";
-import { ButtonLink } from "@/components/ButtonLink";
+import { ButtonLink } from "@/components/ui/ButtonLink";
 
 export function Contact() {
   return (
