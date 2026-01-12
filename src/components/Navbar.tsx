@@ -2,7 +2,8 @@
 
 import Link from "next/link";
 import { ScrollLink } from "@/components/ScrollLink";
-import { Github, Linkedin, Terminal } from "lucide-react";
+import { Terminal } from "lucide-react";
+import { SocialLinks } from "@/components/SocialLinks";
 
 const NAV_ITEMS = [
   { href: "#about", label: "About" },
@@ -35,24 +36,7 @@ export function Navbar() {
           ))}
         </nav>
 
-        <div className="ml-auto flex items-center gap-4 shrink-0">
-          <a
-            href="https://github.com/alejocv7"
-            target="_blank"
-            className="text-muted hover:text-foreground transition-colors"
-          >
-            <Github className="h-5 w-5" />
-            <span className="sr-only">GitHub</span>
-          </a>
-          <a
-            href="https://www.linkedin.com/in/alejandrocanizares/"
-            target="_blank"
-            className="text-muted hover:text-foreground transition-colors"
-          >
-            <Linkedin className="h-5 w-5" />
-            <span className="sr-only">LinkedIn</span>
-          </a>
-        </div>
+        <SocialLinks />
       </div>
     </header>
   );
