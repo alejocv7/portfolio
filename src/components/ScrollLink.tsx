@@ -1,14 +1,20 @@
 "use client";
 
-import Link, { LinkProps } from "next/link";
 import React from "react";
+import Link, { LinkProps } from "next/link";
+import { cn } from "@/lib/utils";
 
 interface ScrollLinkProps extends LinkProps {
   children: React.ReactNode;
   className?: string;
 }
 
-export function ScrollLink({ children, href, ...props }: ScrollLinkProps) {
+export function ScrollLink({
+  children,
+  href,
+  className,
+  ...props
+}: ScrollLinkProps) {
   const handleScroll = (e: React.MouseEvent<HTMLAnchorElement, MouseEvent>) => {
     props.onClick?.(e);
 
@@ -26,7 +32,12 @@ export function ScrollLink({ children, href, ...props }: ScrollLinkProps) {
   };
 
   return (
-    <Link href={href} onClick={handleScroll} {...props}>
+    <Link
+      href={href}
+      onClick={handleScroll}
+      className={cn(className)}
+      {...props}
+    >
       {children}
     </Link>
   );
