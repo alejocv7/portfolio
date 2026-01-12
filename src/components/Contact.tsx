@@ -1,26 +1,19 @@
-"use client";
-
-import { motion } from "framer-motion";
-import { ButtonLink } from "@/components/ButtonLink";
+import { Section } from "@/components/Section";
+import { Card } from "@/components/Card";
 import { Linkedin } from "lucide-react";
 import { portfolio } from "@/data/portfolio";
+import { ButtonLink } from "@/components/ButtonLink";
 
 export function Contact() {
   return (
-    <section id="contact" className="py-20 w-full mx-auto max-w-5xl px-6">
-      <div className="mb-12">
-        <h2 className="text-3xl text-center font-bold tracking-tight sm:text-4xl text-foreground">
-          Let&apos;s Connect
-        </h2>
-      </div>
-
-      <motion.div
+    <Section id="contact" title="Let's Connect">
+      <Card
         initial={{ opacity: 0, scale: 0.95 }}
         whileInView={{ opacity: 1, scale: 1 }}
         transition={{ duration: 0.5 }}
-        className="text-center rounded-3xl bg-card/50 p-4 md:p-8 border border-white/10"
+        className="text-center"
       >
-        <p className="text-muted mb-8 text-lg">
+        <p className="text-muted mb-8">
           If you&apos;re hiring for a software engineering role, I&apos;m happy
           to talk about how my experience fits your team&apos;s needs.
         </p>
@@ -34,7 +27,7 @@ export function Contact() {
             LinkedIn
           </ButtonLink>
         </div>
-      </motion.div>
-    </section>
+      </Card>
+    </Section>
   );
 }

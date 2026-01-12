@@ -1,29 +1,24 @@
 "use client";
 
-import { motion } from "framer-motion";
+import { Section } from "@/components/Section";
+import { Card } from "@/components/Card";
 import Image from "next/image";
 import { ButtonLink } from "@/components/ButtonLink";
-import { ExternalLink, Github } from "lucide-react";
+import { ExternalLink } from "lucide-react";
 import { portfolio } from "@/data/portfolio";
 
 export function ProjectShowcase() {
   return (
-    <section id="projects" className="py-20 container mx-auto max-w-6xl px-6">
-      <div className="mb-12">
-        <h2 className="text-3xl text-center font-bold tracking-tight sm:text-4xl text-foreground">
-          Featured Projects
-        </h2>
-      </div>
-
+    <Section id="projects" title="Featured Projects" maxWidth="6xl">
       <div className="space-y-16">
         {portfolio.projects.map((project, index) => (
-          <motion.div
+          <Card
             key={project.title}
             initial={{ opacity: 0, y: 20 }}
             whileInView={{ opacity: 1, y: 0 }}
             transition={{ delay: index * 0.1 }}
             viewport={{ once: true }}
-            className="group relative grid gap-8 rounded-2xl border border-white/10 bg-card/50 p-8 lg:grid-cols-2 lg:gap-12 hover:border-accent-blue/30 transition-all hover:-translate-y-1"
+            className="group grid gap-8 lg:grid-cols-2 lg:gap-12 hover:border-accent-blue/30 transition-all hover:-translate-y-1"
           >
             <div
               className={`relative aspect-video overflow-hidden rounded-xl border border-white/10 ${
@@ -72,9 +67,9 @@ export function ProjectShowcase() {
                 )}
               </div>
             </div>
-          </motion.div>
+          </Card>
         ))}
       </div>
-    </section>
+    </Section>
   );
 }

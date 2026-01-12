@@ -2,6 +2,8 @@
 
 import { motion } from "framer-motion";
 import { portfolio } from "@/data/portfolio";
+import { Section } from "@/components/Section";
+import { Card } from "@/components/Card";
 import { Code2, Cloud, Database } from "lucide-react";
 
 const icons = {
@@ -29,14 +31,8 @@ const getStyles = (category: string) => {
 
 export function Expertise() {
   return (
-    <section id="skills" className="py-20 w-full mx-auto max-w-5xl px-6">
-      <div className="mb-12">
-        <h2 className="text-3xl text-center font-bold tracking-tight sm:text-4xl text-foreground">
-          Technical Expertise
-        </h2>
-      </div>
-
-      <div className="rounded-3xl border border-white/10 bg-card/50 p-4 md:p-8 relative overflow-hidden">
+    <Section id="skills" title="Technical Expertise">
+      <Card>
         {/* Decorative background blend */}
         <div className="absolute top-0 right-0 -mt-20 -mr-20 w-80 h-80 bg-accent-blue/10 blur-3xl rounded-full pointer-events-none" />
 
@@ -81,7 +77,7 @@ export function Expertise() {
             );
           })}
         </div>
-      </div>
-    </section>
+      </Card>
+    </Section>
   );
 }
