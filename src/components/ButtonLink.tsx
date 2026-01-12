@@ -4,17 +4,18 @@ import React from "react";
 import Link, { LinkProps } from "next/link";
 import { cn } from "@/lib/utils";
 
-interface ScrollLinkProps extends LinkProps {
+interface ButtonLinkProps extends LinkProps {
   children: React.ReactNode;
   className?: string;
+  target?: string;
 }
 
-export function ScrollLink({
+export function ButtonLink({
   children,
   href,
   className,
   ...props
-}: ScrollLinkProps) {
+}: ButtonLinkProps) {
   const handleScroll = (e: React.MouseEvent<HTMLAnchorElement, MouseEvent>) => {
     props.onClick?.(e);
 

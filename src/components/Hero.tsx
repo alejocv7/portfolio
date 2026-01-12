@@ -1,8 +1,7 @@
 "use client";
 
 import { motion } from "framer-motion";
-import Link from "next/link";
-import { ScrollLink } from "@/components/ScrollLink";
+import { ButtonLink } from "@/components/ButtonLink";
 import { ArrowRight, ArrowDown, ChevronDown } from "lucide-react";
 import { portfolio } from "@/data/portfolio";
 
@@ -71,22 +70,19 @@ export function Hero() {
 
         {/* Quick buttons */}
         <div className="flex flex-row items-center justify-center gap-4 pt-6">
-          <ScrollLink
-            href="#projects"
-            className="btn-primary group flex items-center justify-center gap-2"
-          >
+          <ButtonLink href="#projects" className="btn-primary">
             View Projects
             <ArrowDown className="h-4 w-4" />
-          </ScrollLink>
+          </ButtonLink>
 
-          <Link
+          <ButtonLink
             href={portfolio.personal.socials.linkedin}
             target="_blank"
-            className="btn-secondary group flex items-center justify-center gap-2"
+            className="btn-secondary"
           >
             Connect
             <ArrowRight className="h-4 w-4" />
-          </Link>
+          </ButtonLink>
         </div>
       </motion.div>
 

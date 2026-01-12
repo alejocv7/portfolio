@@ -1,7 +1,7 @@
 "use client";
 
 import { motion } from "framer-motion";
-import Link from "next/link";
+import { ButtonLink } from "@/components/ButtonLink";
 import { Linkedin } from "lucide-react";
 import { portfolio } from "@/data/portfolio";
 
@@ -24,14 +24,14 @@ export function Contact() {
           I&apos;m interested to hear about your project!
         </p>
         <div className="flex justify-center gap-4">
-          <Link
+          <ButtonLink
             href={portfolio.personal.socials.linkedin}
             target="_blank"
-            className="btn-secondary inline-flex items-center justify-center"
+            className="btn-secondary"
           >
-            <Linkedin className="mr-2 h-4 w-4" />
+            <Linkedin className="h-4 w-4" />
             LinkedIn
-          </Link>
+          </ButtonLink>
         </div>
       </motion.div>
     </section>

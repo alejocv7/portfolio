@@ -2,7 +2,7 @@
 
 import { motion } from "framer-motion";
 import Image from "next/image";
-import Link from "next/link";
+import { ButtonLink } from "@/components/ButtonLink";
 import { ExternalLink, Github } from "lucide-react";
 import { portfolio } from "@/data/portfolio";
 
@@ -64,14 +64,14 @@ export function ProjectShowcase() {
 
               <div className="flex gap-4 pt-2">
                 {project.link && (
-                  <Link
+                  <ButtonLink
                     href={project.link}
                     target="_blank"
-                    className="inline-flex items-center gap-2 text-sm font-medium text-foreground hover:text-accent-blue transition-colors bg-white/5 px-4 py-2 rounded-lg border border-white/10 hover:bg-white/10"
+                    className="btn-secondary"
                   >
                     <ExternalLink className="h-4 w-4" />
                     See Project
-                  </Link>
+                  </ButtonLink>
                 )}
               </div>
             </div>
