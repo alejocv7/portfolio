@@ -2,7 +2,7 @@
 
 import { motion } from "framer-motion";
 import Link from "next/link";
-import { Mail, Linkedin } from "lucide-react";
+import { Linkedin } from "lucide-react";
 import { portfolio } from "@/data/portfolio";
 
 export function Contact() {
@@ -27,7 +27,7 @@ export function Contact() {
           <Link
             href={portfolio.personal.socials.linkedin}
             target="_blank"
-            className="inline-flex h-12 items-center justify-center rounded-full border border-white/10 bg-white/5 px-8 text-sm font-medium transition-colors hover:bg-white/10"
+            className="btn-secondary inline-flex items-center justify-center"
           >
             <Linkedin className="mr-2 h-4 w-4" />
             LinkedIn

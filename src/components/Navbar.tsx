@@ -26,11 +26,7 @@ export function Navbar() {
 
         <nav className="absolute left-1/2 -translate-x-1/2 hidden md:flex items-center gap-8 text-sm font-medium">
           {NAV_ITEMS.map(({ href, label }) => (
-            <ScrollLink
-              key={href}
-              href={href}
-              className="text-muted hover:text-foreground transition-colors"
-            >
+            <ScrollLink key={href} href={href} className="btn-link">
               {label}
             </ScrollLink>
           ))}

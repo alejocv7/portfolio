@@ -57,3 +57,19 @@ h6 {
 @utility text-gradient {
   @apply bg-clip-text text-transparent bg-linear-to-r from-accent-blue via-accent-purple to-accent-emerald;
 }
+
+@utility btn-base {
+  @apply w-36 py-3 rounded-full text-sm font-bold hover:scale-105 transition-all;
+}
+
+@utility btn-primary {
+  @apply btn-base bg-foreground text-background;
+}
+
+@utility btn-secondary {
+  @apply btn-base border border-white/10 bg-white/5 backdrop-blur-sm hover:bg-white/10;
+}
+
+@utility btn-link {
+  @apply text-muted hover:text-foreground transition-colors;
+}

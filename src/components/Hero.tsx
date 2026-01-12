@@ -73,15 +73,16 @@ export function Hero() {
         <div className="flex flex-row items-center justify-center gap-4 pt-6">
           <ScrollLink
             href="#projects"
-            className="group flex w-36 items-center justify-center gap-2 rounded-full bg-foreground py-3 text-sm font-bold text-background transition-all hover:scale-105"
+            className="btn-primary group flex items-center justify-center gap-2"
           >
             View Projects
             <ArrowDown className="h-4 w-4" />
           </ScrollLink>
+
           <Link
             href={portfolio.personal.socials.linkedin}
             target="_blank"
-            className="group flex w-36 items-center justify-center gap-2 rounded-full border border-white/10 bg-white/5 py-3 text-sm font-bold backdrop-blur-sm transition-all hover:bg-white/10 hover:scale-105"
+            className="btn-secondary group flex items-center justify-center gap-2"
           >
             Connect
             <ArrowRight className="h-4 w-4" />
