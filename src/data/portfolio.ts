@@ -77,8 +77,8 @@ export const portfolio = {
     {
       title: "Prosthetic Arm",
       description:
-        "IEEE published article on low-cost robotic prosthetics using 3D printing. Prototypes included a glove-controlled hand and EMG-controlled arm. Finger motions were controlled by servomotors, and the rotation of each servomotor was achieved using a microcontroller.",
-      tech: ["3D Printing", "Microcontrollers", "EMG Sensors", "C++"],
+        "Low-cost robotic prosthetics using 3D printing. Published in IEEE, the project featured a glove-controlled hand and EMG-controlled arm. Finger articulation was achieved through servomotors driven by a microcontroller.",
+      tech: ["C++", "Microcontrollers", "EMG Sensors", "3D Printing"],
       link: "https://ieeexplore.ieee.org/document/8261579",
       image: "/legacy_v1/images/Prosthetic Arm/mano_main.jpg",
     },

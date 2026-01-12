@@ -28,12 +28,12 @@ export function Section({
       id={id}
       className={cn("py-20 w-full mx-auto px-6", maxWidthClass, className)}
     >
-      <div className="mb-12">
+      <div className="mb-10">
         <h2 className="text-3xl text-center font-bold tracking-tight sm:text-4xl text-foreground">
           {title}
         </h2>
       </div>
-      <div className={containerClassName}>{children}</div>
+      {children}
     </section>
   );
 }
