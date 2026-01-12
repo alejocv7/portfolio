@@ -29,7 +29,7 @@ const getStyles = (category: string) => {
 
 export function Expertise() {
   return (
-    <section id="skills" className="py-20 w-full max-w-5xl mx-auto px-6">
+    <section id="skills" className="py-20 w-full mx-auto max-w-5xl px-6">
       <div className="mb-12">
         <h2 className="text-3xl text-center font-bold tracking-tight sm:text-4xl text-foreground">
           Technical Expertise

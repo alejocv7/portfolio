@@ -2,7 +2,7 @@
 
 import { motion } from "framer-motion";
 import { ButtonLink } from "@/components/ButtonLink";
-import { ArrowRight, ArrowDown, ChevronDown } from "lucide-react";
+import { ArrowRight, ChevronDown, ExternalLink } from "lucide-react";
 import { portfolio } from "@/data/portfolio";
 
 const categoryColors = {
@@ -71,8 +71,8 @@ export function Hero() {
         {/* Quick buttons */}
         <div className="flex flex-row items-center justify-center gap-4 pt-6">
           <ButtonLink href="#projects" className="btn-primary">
+            <ArrowRight className="h-4 w-4" />
             View Projects
-            <ArrowDown className="h-4 w-4" />
           </ButtonLink>
 
           <ButtonLink
@@ -80,8 +80,8 @@ export function Hero() {
             target="_blank"
             className="btn-secondary"
           >
+            <ExternalLink className="h-4 w-4" />
             Connect
-            <ArrowRight className="h-4 w-4" />
           </ButtonLink>
         </div>
       </motion.div>
