@@ -27,6 +27,13 @@ export function Navbar() {
             <Link
               key={href}
               href={href}
+              onClick={(e) => {
+                e.preventDefault();
+                document.querySelector(href)?.scrollIntoView({
+                  behavior: "smooth",
+                });
+                history.replaceState(null, "", href);
+              }}
               className="text-muted hover:text-foreground transition-colors"
             >
               {label}

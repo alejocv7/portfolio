@@ -16,7 +16,10 @@ const categoryColors = {
 
 export function Hero() {
   return (
-    <section className="relative flex min-h-[90vh] flex-col items-center justify-center overflow-hidden px-4 text-center md:px-6">
+    <section
+      id="about"
+      className="relative flex min-h-[90vh] flex-col items-center justify-center overflow-hidden px-4 text-center md:px-6"
+    >
       {/* Background Gradient */}
       <div className="absolute inset-0 -z-10 h-full w-full bg-[radial-gradient(ellipse_at_center,var(--tw-gradient-stops))] from-accent-purple/10 via-background to-background" />
 
@@ -69,6 +72,13 @@ export function Hero() {
         <div className="flex flex-row items-center justify-center gap-4 pt-6">
           <Link
             href="#projects"
+            onClick={(e) => {
+              e.preventDefault();
+              document.getElementById("projects")?.scrollIntoView({
+                behavior: "smooth",
+              });
+              history.replaceState(null, "", "#projects");
+            }}
             className="group flex w-36 items-center justify-center gap-2 rounded-full bg-foreground py-3 text-sm font-bold text-background transition-all hover:scale-105"
           >
             View Projects
