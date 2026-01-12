@@ -1,6 +1,7 @@
 "use client";
 
 import Link from "next/link";
+import { ScrollLink } from "@/components/ScrollLink";
 import { Github, Linkedin, Terminal } from "lucide-react";
 
 const NAV_ITEMS = [
@@ -24,20 +25,13 @@ export function Navbar() {
 
         <nav className="absolute left-1/2 -translate-x-1/2 hidden md:flex items-center gap-8 text-sm font-medium">
           {NAV_ITEMS.map(({ href, label }) => (
-            <Link
+            <ScrollLink
               key={href}
               href={href}
-              onClick={(e) => {
-                e.preventDefault();
-                document.querySelector(href)?.scrollIntoView({
-                  behavior: "smooth",
-                });
-                history.replaceState(null, "", href);
-              }}
               className="text-muted hover:text-foreground transition-colors"
             >
               {label}
-            </Link>
+            </ScrollLink>
           ))}
         </nav>
 
