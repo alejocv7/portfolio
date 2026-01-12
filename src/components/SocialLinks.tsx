@@ -1,3 +1,5 @@
+"use client";
+
 import { Github, Linkedin } from "lucide-react";
 import { portfolio } from "@/data/portfolio";
 import { cn } from "@/lib/utils";

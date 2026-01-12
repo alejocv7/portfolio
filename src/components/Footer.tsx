@@ -1,3 +1,5 @@
+"use client";
+
 import { SocialLinks } from "@/components/SocialLinks";
 
 export function Footer() {
