@@ -15,14 +15,6 @@ const categoryColors = {
 };
 
 export function Hero() {
-  const handleScrollToProjects = (e: React.MouseEvent<HTMLAnchorElement>) => {
-    e.preventDefault();
-    const projectsSection = document.getElementById("projects");
-    if (projectsSection) {
-      projectsSection.scrollIntoView({ behavior: "smooth", block: "start" });
-    }
-  };
-
   return (
     <section className="relative flex min-h-[90vh] flex-col items-center justify-center overflow-hidden px-4 text-center md:px-6">
       {/* Background Gradient */}
@@ -77,7 +69,6 @@ export function Hero() {
         <div className="flex flex-row items-center justify-center gap-4 pt-6">
           <Link
             href="#projects"
-            onClick={handleScrollToProjects}
             className="group flex w-36 items-center justify-center gap-2 rounded-full bg-foreground py-3 text-sm font-bold text-background transition-all hover:scale-105"
           >
             View Projects
