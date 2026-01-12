@@ -18,7 +18,7 @@ export function ProjectShowcase() {
             whileInView={{ opacity: 1, y: 0 }}
             transition={{ delay: index * 0.1 }}
             viewport={{ once: true }}
-            className="group grid gap-8 lg:grid-cols-2 lg:gap-12 hover:border-accent-blue/30 transition-all hover:-translate-y-1"
+            className="group grid gap-8 lg:grid-cols-2 lg:gap-12 transition-all hover:-translate-y-1"
           >
             <div
               className={`relative aspect-video overflow-hidden rounded-xl border border-white/10 ${
