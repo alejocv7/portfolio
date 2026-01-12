@@ -1,6 +1,7 @@
 "use client";
 
 import { SocialLinks } from "@/components/ui/SocialLinks";
+import { portfolio } from "@/data/portfolio";
 
 export function Footer() {
   return (
@@ -8,7 +9,7 @@ export function Footer() {
       <div className="mx-auto max-w-7xl px-4 md:px-6">
         <div className="flex items-center justify-between gap-4 md:flex-row">
           <p className="text-center text-sm text-muted">
-            Alejandro Canizares | Senior Software Engineer
+            {portfolio.personal.name} | {portfolio.personal.role}
           </p>
           <SocialLinks />
         </div>
