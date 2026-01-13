@@ -2,6 +2,7 @@
 
 import { motion } from "framer-motion";
 import { ButtonLink } from "@/components/ui/ButtonLink";
+import { Badge } from "@/components/ui/Badge";
 import { ArrowRight, ChevronDown, ExternalLink } from "lucide-react";
 import { portfolio } from "@/data/portfolio";
 
@@ -54,15 +55,15 @@ export function Hero() {
                 ] || "bg-white/5 text-muted border-white/10";
 
               return (
-                <motion.span
+                <Badge
                   key={skill}
                   initial={{ opacity: 0, scale: 0.9 }}
                   animate={{ opacity: 1, scale: 1 }}
                   transition={{ delay: 0.5 + index * 0.02 }}
-                  className={`px-4 py-1.5 rounded-full text-xs font-semibold border transition-all cursor-default ${colorClass} hover:scale-110 hover:bg-opacity-20 shadow-lg shadow-black/20`}
+                  className={`${colorClass} hover:scale-110 hover:bg-opacity-20`}
                 >
                   {skill}
-                </motion.span>
+                </Badge>
               );
             })
           )}

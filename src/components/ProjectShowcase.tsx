@@ -2,6 +2,7 @@
 
 import { Section } from "@/components/ui/Section";
 import { Card } from "@/components/ui/Card";
+import { Badge } from "@/components/ui/Badge";
 import Image from "next/image";
 import { ButtonLink } from "@/components/ui/ButtonLink";
 import { ExternalLink } from "lucide-react";
@@ -34,18 +35,18 @@ export function ProjectShowcase() {
             </div>
 
             <div className="flex flex-col justify-center space-y-6">
-              <div>
+              <div className="flex flex-col gap-2">
                 <h3 className="text-2xl font-bold md:text-3xl text-foreground mb-2">
                   {project.title}
                 </h3>
                 <div className="flex flex-wrap gap-2 text-sm">
                   {project.tech.map((t, i) => (
-                    <span key={t} className="text-accent-blue font-medium">
-                      {t}{" "}
-                      {i !== project.tech.length - 1 && (
-                        <span className="text-muted/30 mx-1">•</span>
-                      )}
-                    </span>
+                    <Badge
+                      key={t}
+                      className="text-accent-blue border-accent-blue/20"
+                    >
+                      {t}
+                    </Badge>
                   ))}
                 </div>
               </div>

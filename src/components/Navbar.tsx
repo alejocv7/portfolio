@@ -24,7 +24,7 @@ export function Navbar() {
           <span className="font-bold text-foreground">Alejandro Canizares</span>
         </ButtonLink>
 
-        <nav className="absolute left-1/2 -translate-x-1/2 hidden md:flex items-center gap-8 text-sm font-medium">
+        <nav className="absolute left-1/2 -translate-x-1/2 hidden md:flex items-center gap-8">
           {NAV_ITEMS.map(({ href, label }) => (
             <ButtonLink key={href} href={href} variant="link">
               {label}
