@@ -10,7 +10,7 @@ import { portfolio } from "@/data/portfolio";
 
 export function ProjectShowcase() {
   return (
-    <Section id="projects" title="Featured Projects" maxWidth="6xl">
+    <Section id="projects" title="Featured Projects" size="wide">
       <div className="space-y-16">
         {portfolio.projects.map((project, index) => (
           <Card
