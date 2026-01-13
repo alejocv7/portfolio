@@ -52,7 +52,7 @@ export function Hero() {
               const colorClass =
                 categoryColors[
                   category.category as keyof typeof categoryColors
-                ] || "bg-white/5 text-muted border-white/10";
+                ];
 
               return (
                 <Badge
