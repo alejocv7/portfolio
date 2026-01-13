@@ -1,4 +1,5 @@
 import { cn } from "@/lib/utils";
+import { Container } from "@/components/ui/Container";
 
 interface SectionProps {
   id?: string;
@@ -22,20 +23,15 @@ export function Section({
   maxWidth = "5xl",
 }: SectionProps) {
   return (
-    <section
-      id={id}
-      className={cn(
-        "py-20 w-full mx-auto px-6",
-        MAX_WIDTH_CLASSES[maxWidth],
-        className
-      )}
-    >
-      <div className="mb-10">
-        <h2 className="text-3xl text-center font-bold tracking-tight sm:text-4xl text-foreground">
-          {title}
-        </h2>
-      </div>
-      {children}
+    <section id={id} className={cn("py-20 w-full", className)}>
+      <Container className={cn(MAX_WIDTH_CLASSES[maxWidth])}>
+        <div className="mb-10">
+          <h2 className="text-3xl text-center font-bold tracking-tight sm:text-4xl text-foreground">
+            {title}
+          </h2>
+        </div>
+        {children}
+      </Container>
     </section>
   );
 }

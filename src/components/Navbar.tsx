@@ -3,6 +3,7 @@
 import { ButtonLink } from "@/components/ui/ButtonLink";
 import { Terminal } from "lucide-react";
 import { SocialLinks } from "@/components/ui/SocialLinks";
+import { Container } from "@/components/ui/Container";
 
 const NAV_ITEMS = [
   { href: "#about", label: "About" },
@@ -14,7 +15,7 @@ const NAV_ITEMS = [
 export function Navbar() {
   return (
     <header className="fixed top-0 z-50 w-full border-b border-white/10 bg-background/80 backdrop-blur-md">
-      <div className="mx-auto flex h-16 max-w-7xl items-center px-4 md:px-6 relative justify-center">
+      <Container className="flex h-16 items-center justify-between relative">
         <ButtonLink
           href="/"
           variant="link"
@@ -33,7 +34,7 @@ export function Navbar() {
         </nav>
 
         <SocialLinks />
-      </div>
+      </Container>
     </header>
   );
 }
