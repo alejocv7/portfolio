@@ -6,14 +6,7 @@ import { Badge } from "@/components/ui/Badge";
 import { ArrowRight, ChevronDown, ExternalLink } from "lucide-react";
 import { portfolio } from "@/data/portfolio";
 
-const categoryColors = {
-  "Backend Development":
-    "bg-accent-blue/10 text-accent-blue border-accent-blue/20 hover:border-accent-blue/50",
-  "Cloud & DevOps":
-    "bg-accent-purple/10 text-accent-purple border-accent-purple/20 hover:border-accent-purple/50",
-  "Data & Streaming":
-    "bg-accent-emerald/10 text-accent-emerald border-accent-emerald/20 hover:border-accent-emerald/50",
-};
+import { getCategoryColor } from "@/lib/constants";
 
 export function Hero() {
   return (
@@ -49,10 +42,7 @@ export function Hero() {
         <div className="flex flex-wrap justify-center gap-3 pt-4">
           {portfolio.skills.map((category) =>
             category.items.slice(0, 3).map((skill, index) => {
-              const colorClass =
-                categoryColors[
-                  category.category as keyof typeof categoryColors
-                ];
+              const variant = getCategoryColor(category.category);
 
               return (
                 <Badge
@@ -60,7 +50,7 @@ export function Hero() {
                   initial={{ opacity: 0, scale: 0.9 }}
                   animate={{ opacity: 1, scale: 1 }}
                   transition={{ delay: 0.5 + index * 0.02 }}
-                  className={`${colorClass} hover:scale-110 hover:bg-opacity-20`}
+                  variant={variant}
                 >
                   {skill}
                 </Badge>

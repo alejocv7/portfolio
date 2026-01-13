@@ -5,6 +5,7 @@ import { portfolio } from "@/data/portfolio";
 import { Section } from "@/components/ui/Section";
 import { Card } from "@/components/ui/Card";
 import { Code2, Cloud, Database } from "lucide-react";
+import { getCategoryColor } from "@/lib/constants";
 
 const icons = {
   "Backend Development": Code2,
@@ -12,14 +13,8 @@ const icons = {
   "Data & Streaming": Database,
 };
 
-const colorMap = {
-  "Backend Development": "blue",
-  "Cloud & DevOps": "purple",
-  "Data & Streaming": "emerald",
-};
-
 const getStyles = (category: string) => {
-  const color = colorMap[category as keyof typeof colorMap] || "blue";
+  const color = getCategoryColor(category);
   return {
     text: `text-accent-${color}`,
     bg: `bg-accent-${color}/10`,

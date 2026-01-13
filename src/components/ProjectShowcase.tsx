@@ -41,10 +41,7 @@ export function ProjectShowcase() {
                 </h3>
                 <div className="flex flex-wrap gap-2 text-sm">
                   {project.tech.map((t, i) => (
-                    <Badge
-                      key={t}
-                      className="text-accent-blue border-accent-blue/20"
-                    >
+                    <Badge key={t} variant="default">
                       {t}
                     </Badge>
                   ))}
