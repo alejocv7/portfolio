@@ -70,7 +70,7 @@ export function Hero() {
 
         {/* Quick buttons */}
         <div className="flex flex-row items-center justify-center gap-4 pt-6">
-          <ButtonLink href="#projects" className="btn-primary">
+          <ButtonLink href="#projects" variant="primary">
             <ArrowRight className="h-4 w-4" />
             View Projects
           </ButtonLink>
@@ -78,7 +78,7 @@ export function Hero() {
           <ButtonLink
             href={portfolio.personal.socials.linkedin}
             target="_blank"
-            className="btn-secondary"
+            variant="secondary"
           >
             <ExternalLink className="h-4 w-4" />
             Connect

@@ -17,6 +17,7 @@ export function Navbar() {
       <div className="mx-auto flex h-16 max-w-7xl items-center px-4 md:px-6 relative justify-center">
         <ButtonLink
           href="/"
+          variant="link"
           className="flex items-center gap-2 text-lg font-bold tracking-tighter shrink-0"
         >
           <Terminal className="h-6 w-6 text-accent-blue" />
@@ -25,7 +26,7 @@ export function Navbar() {
 
         <nav className="absolute left-1/2 -translate-x-1/2 hidden md:flex items-center gap-8 text-sm font-medium">
           {NAV_ITEMS.map(({ href, label }) => (
-            <ButtonLink key={href} href={href} className="btn-link">
+            <ButtonLink key={href} href={href} variant="link">
               {label}
             </ButtonLink>
           ))}

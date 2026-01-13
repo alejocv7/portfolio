@@ -21,7 +21,7 @@ export function Contact() {
           <ButtonLink
             href={portfolio.personal.socials.linkedin}
             target="_blank"
-            className="btn-secondary"
+            variant="secondary"
           >
             <Linkedin className="h-4 w-4" />
             LinkedIn

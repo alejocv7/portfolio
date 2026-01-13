@@ -59,7 +59,7 @@ export function ProjectShowcase() {
                   <ButtonLink
                     href={project.link}
                     target="_blank"
-                    className="btn-secondary"
+                    variant="secondary"
                   >
                     <ExternalLink className="h-4 w-4" />
                     See Project
