@@ -5,7 +5,7 @@ import { portfolio } from "@/data/portfolio";
 import { Section } from "@/components/ui/Section";
 import { Card } from "@/components/ui/Card";
 import { Code2, Cloud, Database } from "lucide-react";
-import { getCategoryColor, CATEGORY_THEMES } from "@/lib/constants";
+import { getTheme } from "@/lib/constants";
 
 const icons = {
   "Backend Development": Code2,
@@ -23,8 +23,7 @@ export function Expertise() {
         <div className="grid gap-8 md:grid-cols-3">
           {portfolio.skills.map((skill, index) => {
             const Icon = icons[skill.category as keyof typeof icons] || Code2;
-            const color = getCategoryColor(skill.category);
-            const styles = CATEGORY_THEMES[color];
+            const styles = getTheme(skill.category);
 
             return (
               <motion.div

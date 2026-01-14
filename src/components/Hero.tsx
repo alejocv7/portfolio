@@ -6,7 +6,7 @@ import { Badge } from "@/components/ui/Badge";
 import { ArrowRight, ChevronDown, ExternalLink } from "lucide-react";
 import { portfolio } from "@/data/portfolio";
 
-import { getCategoryColor } from "@/lib/constants";
+import { getTheme } from "@/lib/constants";
 
 export function Hero() {
   return (
@@ -42,7 +42,7 @@ export function Hero() {
         <div className="flex flex-wrap justify-center gap-3 pt-4">
           {portfolio.skills.map((category) =>
             category.items.slice(0, 3).map((skill, index) => {
-              const variant = getCategoryColor(category.category);
+              const theme = getTheme(category.category);
 
               return (
                 <Badge
@@ -50,7 +50,7 @@ export function Hero() {
                   initial={{ opacity: 0, scale: 0.9 }}
                   animate={{ opacity: 1, scale: 1 }}
                   transition={{ delay: 0.5 + index * 0.02 }}
-                  variant={variant}
+                  variant={theme.variant}
                 >
                   {skill}
                 </Badge>
