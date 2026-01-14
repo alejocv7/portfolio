@@ -5,23 +5,12 @@ import { portfolio } from "@/data/portfolio";
 import { Section } from "@/components/ui/Section";
 import { Card } from "@/components/ui/Card";
 import { Code2, Cloud, Database } from "lucide-react";
-import { getCategoryColor } from "@/lib/constants";
+import { getCategoryColor, CATEGORY_THEMES } from "@/lib/constants";
 
 const icons = {
   "Backend Development": Code2,
   "Cloud & DevOps": Cloud,
   "Data & Streaming": Database,
-};
-
-const getStyles = (category: string) => {
-  const color = getCategoryColor(category);
-  return {
-    text: `text-accent-${color}`,
-    bg: `bg-accent-${color}/10`,
-    border: `border-accent-${color}/20`,
-    bullet: `bg-accent-${color}`,
-    hover: `hover:bg-accent-${color}/15 hover:border-accent-${color}/50`,
-  };
 };
 
 export function Expertise() {
@@ -34,7 +23,8 @@ export function Expertise() {
         <div className="grid gap-8 md:grid-cols-3">
           {portfolio.skills.map((skill, index) => {
             const Icon = icons[skill.category as keyof typeof icons] || Code2;
-            const styles = getStyles(skill.category);
+            const color = getCategoryColor(skill.category);
+            const styles = CATEGORY_THEMES[color];
 
             return (
               <motion.div
