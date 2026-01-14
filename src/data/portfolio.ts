@@ -13,6 +13,7 @@ export const portfolio = {
   skills: [
     {
       category: "Backend Development",
+      variant: "blue",
       items: [
         "Java",
         "Python",
@@ -25,6 +26,7 @@ export const portfolio = {
     },
     {
       category: "Cloud & DevOps",
+      variant: "purple",
       items: [
         "AWS",
         "Terraform",
@@ -38,6 +40,7 @@ export const portfolio = {
     },
     {
       category: "Data & Streaming",
+      variant: "emerald",
       items: ["Kafka", "Kinesis", "NoSQL/SQL", "DynamoDB", "Pandas"],
     },
   ],

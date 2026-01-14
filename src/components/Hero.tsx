@@ -6,8 +6,6 @@ import { Badge } from "@/components/ui/Badge";
 import { ArrowRight, ChevronDown, ExternalLink } from "lucide-react";
 import { portfolio } from "@/data/portfolio";
 
-import { getThemeVariant } from "@/lib/constants";
-
 export function Hero() {
   return (
     <section
@@ -42,7 +40,7 @@ export function Hero() {
         <div className="flex flex-wrap justify-center gap-3 pt-4">
           {portfolio.skills.map((category) =>
             category.items.slice(0, 3).map((skill, index) => {
-              const variant = getThemeVariant(category.category);
+              const variant = category.variant as any;
 
               return (
                 <Badge

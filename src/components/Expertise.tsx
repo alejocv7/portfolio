@@ -5,7 +5,7 @@ import { portfolio } from "@/data/portfolio";
 import { Section } from "@/components/ui/Section";
 import { Card } from "@/components/ui/Card";
 import { Code2, Cloud, Database } from "lucide-react";
-import { getTheme } from "@/lib/constants";
+import { getThemeAccent, type ThemeVariant } from "@/lib/constants";
 
 const icons = {
   "Backend Development": Code2,
@@ -23,12 +23,13 @@ export function Expertise() {
         <div className="grid gap-8 md:grid-cols-3">
           {portfolio.skills.map((skill, index) => {
             const Icon = icons[skill.category as keyof typeof icons] || Code2;
-            const theme = getTheme(skill.category);
+            const variant = skill.variant as ThemeVariant;
+            const accent = getThemeAccent(variant);
 
             return (
               <Card
                 key={skill.category}
-                variant={theme.variant}
+                variant={variant}
                 initial={{ opacity: 0, y: 20 }}
                 whileInView={{ opacity: 1, y: 0 }}
                 transition={{ delay: index * 0.1 }}
@@ -37,12 +38,12 @@ export function Expertise() {
               >
                 <div className="flex items-center gap-4 md:max-lg:gap-2.5 mb-6">
                   <div
-                    className={`inline-flex items-center justify-center rounded-xl ${theme.bg} p-2.5 border ${theme.border}`}
+                    className={`inline-flex items-center justify-center rounded-xl ${accent.bg} p-2.5 border ${accent.border}`}
                   >
-                    <Icon className={`h-5 w-5 ${theme.text}`} />
+                    <Icon className={`h-5 w-5 ${accent.text}`} />
                   </div>
                   <h3
-                    className={`text-lg md:max-lg:text-base font-bold ${theme.text}`}
+                    className={`text-lg md:max-lg:text-base font-bold ${accent.text}`}
                   >
                     {skill.category}
                   </h3>
@@ -52,7 +53,7 @@ export function Expertise() {
                   {skill.items.map((item) => (
                     <li key={item} className="flex items-center text-sm">
                       <span
-                        className={`mr-3 h-1.5 w-1.5 shrink-0 rounded-full ${theme.bullet}`}
+                        className={`mr-3 h-1.5 w-1.5 shrink-0 rounded-full ${accent.bullet}`}
                       />
                       {item}
                     </li>
