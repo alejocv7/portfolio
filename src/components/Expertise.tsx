@@ -23,25 +23,26 @@ export function Expertise() {
         <div className="grid gap-8 md:grid-cols-3">
           {portfolio.skills.map((skill, index) => {
             const Icon = icons[skill.category as keyof typeof icons] || Code2;
-            const styles = getTheme(skill.category);
+            const theme = getTheme(skill.category);
 
             return (
-              <motion.div
+              <Card
                 key={skill.category}
+                variant={theme.variant}
                 initial={{ opacity: 0, y: 20 }}
                 whileInView={{ opacity: 1, y: 0 }}
                 transition={{ delay: index * 0.1 }}
                 viewport={{ once: true }}
-                className={`relative overflow-hidden rounded-2xl border ${styles.border} bg-background/40 p-6 md:max-lg:p-5 transition-all duration-300 ${styles.hover} group`}
+                className="p-6 md:max-lg:p-5"
               >
                 <div className="flex items-center gap-4 md:max-lg:gap-2.5 mb-6">
                   <div
-                    className={`inline-flex items-center justify-center rounded-xl ${styles.bg} p-2.5 border ${styles.border}`}
+                    className={`inline-flex items-center justify-center rounded-xl ${theme.bg} p-2.5 border ${theme.border}`}
                   >
-                    <Icon className={`h-5 w-5 ${styles.text}`} />
+                    <Icon className={`h-5 w-5 ${theme.text}`} />
                   </div>
                   <h3
-                    className={`text-lg md:max-lg:text-base font-bold ${styles.text}`}
+                    className={`text-lg md:max-lg:text-base font-bold ${theme.text}`}
                   >
                     {skill.category}
                   </h3>
@@ -51,13 +52,13 @@ export function Expertise() {
                   {skill.items.map((item) => (
                     <li key={item} className="flex items-center text-sm">
                       <span
-                        className={`mr-3 h-1.5 w-1.5 shrink-0 rounded-full ${styles.bullet}`}
+                        className={`mr-3 h-1.5 w-1.5 shrink-0 rounded-full ${theme.bullet}`}
                       />
                       {item}
                     </li>
                   ))}
                 </ul>
-              </motion.div>
+              </Card>
             );
           })}
         </div>
