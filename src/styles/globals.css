@@ -40,14 +40,15 @@ body {
   font-feature-settings: "rlig" 1, "calt" 1;
 }
 
-h1,
-h2,
-h3,
-h4,
-h5,
-h6 {
-  color: var(--foreground);
-  /* Headings are white */
+@layer base {
+  h1,
+  h2,
+  h3,
+  h4,
+  h5,
+  h6 {
+    color: var(--foreground);
+  }
 }
 
 @utility bg-grid-white {
