@@ -1,3 +1,9 @@
+import ticImg from "@public/legacy_v1/images/tic-tac-toe/tic_tac_toe_main.jpg";
+import pyImg from "@public/legacy_v1/images/python.jpeg";
+import droneImg from "@public/legacy_v1/images/ar-drone/ar_drone_main.jpg";
+import roombaImg from "@public/legacy_v1/images/roomba/roomba_main.jpg";
+import prostheticImg from "@public/legacy_v1/images/Prosthetic Arm/mano_main.jpg";
+
 export const portfolio = {
   personal: {
     name: "Alejandro Canizares",
@@ -51,14 +57,14 @@ export const portfolio = {
         "Two player tic-tac-toe game in Python, which can be played on the terminal or as a GUI application.",
       tech: ["Python", "Pygame"],
       link: "https://github.com/alejocv7/tic-tac-toe",
-      image: "/legacy_v1/images/tic-tac-toe/tic_tac_toe_main.jpg",
+      image: ticImg,
     },
     {
       title: "Excel Compare",
       description:
         "Script tool used for comparing excel docs. It produces a new excel file highlighting the difference between the original ones.",
       tech: ["Python", "Pandas"],
-      image: "/legacy_v1/images/python.jpeg",
+      image: pyImg,
       link: "https://github.com/alejocv7/py-tools",
     },
     {
@@ -66,7 +72,7 @@ export const portfolio = {
       description:
         "Control of the Parrot AR-Drone 2.0. Developed in ROS with C++ using OpenCV for image recognition to trigger landing, and joystick for manual control.",
       tech: ["C++", "ROS", "OpenCV", "Robotics"],
-      image: "/legacy_v1/images/ar-drone/ar_drone_main.jpg",
+      image: droneImg,
       link: "https://github.com/alejocv7/ros-drone-control",
     },
     {
@@ -74,7 +80,7 @@ export const portfolio = {
       description:
         "ROS project to control an iRobot Roomba. Features obstacle detection, autonomous movement, and joystick control.",
       tech: ["C++", "ROS", "Robotics"],
-      image: "/legacy_v1/images/roomba/roomba_main.jpg",
+      image: roombaImg,
       link: "https://github.com/alejocv7/ros-roomba-control",
     },
     {
@@ -83,7 +89,7 @@ export const portfolio = {
         "Low-cost robotic prosthetics using 3D printing. Published in IEEE, the project featured a glove-controlled hand and EMG-controlled arm. Finger articulation was achieved through servomotors driven by a microcontroller.",
       tech: ["C++", "Microcontrollers", "EMG Sensors", "3D Printing"],
       link: "https://ieeexplore.ieee.org/document/8261579",
-      image: "/legacy_v1/images/Prosthetic Arm/mano_main.jpg",
+      image: prostheticImg,
     },
   ],
 };
