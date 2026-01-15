@@ -3,6 +3,7 @@ import { Geist, Geist_Mono } from "next/font/google";
 import { Navbar } from "@/components/Navbar";
 import { Footer } from "@/components/Footer";
 import "../styles/globals.css";
+import acLogo from "@public/branding/ac-logo.png";
 
 const geistSans = Geist({
   variable: "--font-geist-sans",
@@ -19,7 +20,7 @@ export const metadata: Metadata = {
   description:
     "Senior Software Engineer specialized in backend systems, AWS, and scalability.",
   icons: {
-    icon: "/branding/ac-logo.png",
+    icon: acLogo.src,
   },
 };
 
